@@ -6,26 +6,32 @@
     <link rel="stylesheet" href="assets/css/output.css">
     <title>Webcake</title>
 </head>
-<body class="bg-white min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col p-4">
     <nav class="bg-white w-full">
         <div class="mx-auto py-4 max-w-screen-xl flex flex-wrap items-center justify-between">
             <div class="flex items-center space-x-3 rtl:space-x-reverse gap-4">
+                <button id="menu-toggle" class="lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
                 <a href="" class="flex items-center space-x-3 ">
                     <img src="/assets/img/logo.jpg" alt="" class="h-14">
                     <div>
                         <h1 class="self-center text-2xl whitespace-nowrap">Cake</h1>
                     </div>
                 </a>
-                <div class="flex items-center space-x-3">
-                    <a href="" class="flex items-center">
+                <div id="menu" class="hidden fixed inset-y-0 left-0 w-64 bg-white mt-4 pt-4 p-4 z-50 lg:w-auto lg:relative lg:space-x-3 lg:flex lg:mt-0">
+                    <button id="menu-close" class="lg:hidden mb-4 mt-4 lg:mb-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </button>
+                    <a href="" class="flex items-center mb-4 lg:mb-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
                         <span class="ms-3">Home</span>
                     </a>
-                    <a href="" class="flex items-center">
+                    <a href="" class="flex items-center mb-4 lg:mb-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
                         <span class="ms-3">Products</span>
                     </a>
-                    <a href="" class="flex items-center">
+                    <a href="" class="flex items-center mb-4 lg:mb-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         <span class="ms-3">Contact</span>
                     </a>
@@ -70,7 +76,7 @@
     <!-- section 2 -->
     <section class="container flex flex-col items-center justify-center max-w-screen-xl mx-auto pb-20">
         <h1 class="text-4xl font-bold text-center pt-10 pb-12">เค้กตามเทศกาล</h1>
-        <div class="grid grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <div class="max-w-sm rounded-md overflow-hidden shadow-lg bg-white border-spacing-5">
                 <img src="assets/img/1.png" alt="" class="w-full h-80 object-cover">
                 <div class="px-6 py-4 flex justify-between">
@@ -105,7 +111,7 @@
     <!-- section 3 -->
     <section class="container flex flex-col items-center justify-center max-w-screen-xl mx-auto pb-20">
         <h1 class="text-4xl font-bold text-center pb-12">สินค้าของเรา</h1>
-        <div class="grid grid-cols-5 grid-rows-2 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             <div class="max-w-sm rounded-md overflow-hidden shadow-lg bg-white border-spacing-5">
                 <img src="assets/img/1.png" alt="" class="w-full h-80 object-cover">
                 <div class="px-6 py-4 flex justify-between">
@@ -180,8 +186,25 @@
     </section>
 
     <!-- section 4 -->
-     <section>
-        
-     </section>
+    <section class="flex flex-col items-center justify-center mx-auto pb-20">
+        <div>
+            <h1 class="text-4xl font-bold ">สินค้าแนะนำ</h1>
+            <p class="text-xl">เค้กสุดอร่อย ที่ได้รับความนิยมในตอนนี้ เราขอแนะนำให้คุณได้ลิ้มลอง<br>
+            เค้กช็อคโกแลตชิพ</p>
+            <h2 class="text-3xl font-bold">20 บ./ชิ้น</h2>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+
+        document.getElementById('menu-close').addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            menu.classList.add('hidden');
+        });
+    </script>
 </body>
 </html>
